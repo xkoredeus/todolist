@@ -1,0 +1,45 @@
+body {
+  background-color: #ccc;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.w100 {
+  width: 100%;
+}
+.h100 {
+  height: 100vh;
+}
+.todo__in {
+  max-width: 370px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px;
+}
+.todo__ttl {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.list_num {
+  padding-left: 0;
+  counter-reset: list1;
+  list-style-type: none;
+}
+
+.list_num li {
+  margin-bottom: 10px;
+}
+
+.list_num li::before {
+  counter-increment: list1;
+  content: counter(list1);
+  color: #ccc;
+  font-size: 16px;
+  margin-right: 15px;
+}
